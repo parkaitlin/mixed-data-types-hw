@@ -129,7 +129,18 @@ const inception = {
  };
  console.log(bondTitles);
 
- 
+ // 6.
+ let oddBonds = [];
+
+ for(i = 0; i < bondFilms.length; i++) {
+    if(bondFilms[i].year % 2 === 1){
+        oddBonds.push(bondFilms[i].year);
+    }
+ };
+ console.log(oddBonds);
+
+ // 7.
+
 
 
 
