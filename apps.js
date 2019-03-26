@@ -155,7 +155,17 @@ let cumulativeGross = 0
 };
 console.log(cumulativeGross);
 
-
+// using parsInt and replace
+const result = () => {
+    let totalGross = 0;
+    for (let i = 0; i < bondFilms.length; i++) {
+        bondFilms[i]['gross'] = bondFilms[i]['gross'].replace('$', '');
+        bondFilms[i]['gross'] = parseInt(bondFilms[i]['gross'].replace(/,/g, ''));
+        console.log(bondFilms[i].gross);
+        totalGross += bondFilms[i]['gross'];
+    }
+    console.totalGross;
+};
 
 
 
