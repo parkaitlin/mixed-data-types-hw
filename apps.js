@@ -140,7 +140,69 @@ const inception = {
  console.log(oddBonds);
 
  // 7.
+let cumulativeGross = 0
+ for(i = 0; i < bondFilms.length; i++){
+    let newArray = bondFilms[i].gross.split('')
+    let justNumbersArray = [];
+    for(j = 0; j < newArray.length; j++){
+        if(newArray[j] !== '$' && newArray[j] !== ','){
+            justNumbersArray.push(newArray[j]);
+        }
+    };
+    let justNumbersString = justNumbersArray.join('');
+    bondFilms[i].gross = +justNumbersString;
+    cumulativeGross += bondFilms[i].gross;
+};
+console.log(cumulativeGross);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let cumulativeGross = 0;
+
+// for(i = 0; i < bondFilms.length; i++){
+//     let currentGrossArray = bondFilms[i].gross.split('');
+//     let justNumbersArray = [];
+//     for(j = 0; j < currentGrossArray.length; j++){
+//         if(currentGrossArray[j] !== "$" && currentGrossArray[j] !== ","){
+//             justNumbersArray.push(currentGrossArray[j]);
+//         }
+//     }
+
+//     let justNumbersString = justNumbersArray.join('');
+//     bondFilms[i].gross.replace('', parseInt(justNumbersString, 10));
+// };
+//     for(i = 0; i < bondFilms.length; i++){
+//     cumulativeGross += bondFilms[i].gross
+// }
+// console.log(cumulativeGross);
+
+// define a variable to += the gross for each movie
+// for loop to make gross string into an array 
+// take out '$' and ',' by pushing only numbers into a new array 
+// join() the array into a string
+// replace(the gross string, with its number parseInt(gross, 10)
+// cumulativeGross += what is now in the bondFilms[i].gross
+
+// bondFilms[0].gross.split('')
+// console.log(bondFilms[0].gross.split(''));
+// console.log(parseInt('1108561008', 10));
 
 
 
